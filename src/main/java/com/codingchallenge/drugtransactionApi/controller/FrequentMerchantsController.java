@@ -29,7 +29,7 @@ public class FrequentMerchantsController {
 	@Autowired
 	private DrugTransactionService dtService;
 
-	@RequestMapping(value = "/freqMerchants/{userId}", method = RequestMethod.GET)
+	@RequestMapping(value = "transaction/freqMerchants/{userId}", method = RequestMethod.GET)
 	@ApiOperation(value = "Fetch frequently visited  merchants", response = ResponseEntity.class)
 	public ResponseEntity<ArrayList<String>> fetchFrequentMerchants(@ApiParam(value = "user id to query Transactions", required = true) @PathVariable("userId") long userid) {
 

@@ -123,3 +123,21 @@
 2019-05-07 15:40:37.746  INFO 11500 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-05-07 15:40:37.748  INFO 11500 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-05-07 15:40:37.759  INFO 11500 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-05-07 17:19:49.173  INFO 2788 --- [main] c.c.d.DrugtransactionApiApplication      : Starting DrugtransactionApiApplication on ALASETTSR01-WXL with PID 2788 (C:\proj\drugtransactionApi\target\classes started by SettSr01 in C:\proj\drugtransactionApi)
+2019-05-07 17:19:49.175  INFO 2788 --- [main] c.c.d.DrugtransactionApiApplication      : No active profile set, falling back to default profiles: default
+2019-05-07 17:19:50.894  INFO 2788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-07 17:19:50.931  INFO 2788 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-07 17:19:50.932  INFO 2788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-07 17:19:51.057  INFO 2788 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-07 17:19:51.057  INFO 2788 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1845 ms
+2019-05-07 17:19:51.136  INFO 2788 --- [main] c.c.d.service.DrugTransactionService     : initilizing data store
+2019-05-07 17:19:51.576  INFO 2788 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-07 17:19:51.753  INFO 2788 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-05-07 17:19:51.781  INFO 2788 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-05-07 17:19:51.793  INFO 2788 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-05-07 17:19:52.063  INFO 2788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-07 17:19:52.067  INFO 2788 --- [main] c.c.d.DrugtransactionApiApplication      : Started DrugtransactionApiApplication in 3.537 seconds (JVM running for 9.011)
+2019-05-07 17:21:12.143  INFO 2788 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-07 17:21:12.144  INFO 2788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-07 17:21:12.155  INFO 2788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-05-07 17:21:55.277  INFO 2788 --- [http-nio-8080-exec-1] c.c.d.service.DrugTransactionService     : transaction saved
