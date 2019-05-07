@@ -9,7 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DrugtransactionApiApplication {
 
 	public static void main(String[] args) {
-		private static final Logger  = LoggerFactory.getLogger(DrugtransactionApiApplication.class);
+		  final Logger logger = LoggerFactory.getLogger(DrugtransactionApiApplication.class);
+		  logger.info("Starting DrugtransactionApiApplication ");
 		SpringApplication.run(DrugtransactionApiApplication.class, args);
 	}
 

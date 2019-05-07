@@ -22,7 +22,7 @@ public class DrugTransactionController {
 
 	@RequestMapping(value = "/transaction", method = RequestMethod.POST)
 	public ResponseEntity<?> saveTransaction(@Valid @RequestBody Transaction transaction) {
-		dtservice.saveTransaction(transaction);
-		return new ResponseEntity<>(HttpStatus.CREATED);
+		int size = dtservice.saveTransaction(transaction);
+		return new ResponseEntity<>(size,HttpStatus.CREATED);
 	}
 }

@@ -23,12 +23,9 @@ public class FrequentMerchantsController {
 	public ResponseEntity<ArrayList<String>> fetchFrequentMerchants(@PathVariable("userId") long userid) {
 
 		ArrayList<String> al = utService.fetchFrequentlyVisited(userid);
-		if (al == null) {
+		if (al == null || al.size()==0) {
 			throw new InsufficientTransactionsException("Error - Too few transactions.Atleast five transactions are required to fetch three frequently visited merchants for userId "+ userid);
 		}
-		al.add("one");
-		al.add("two");
-		al.add("three");
 		ResponseEntity<ArrayList<String>> responseEntity = new ResponseEntity<ArrayList<String>>(al, HttpStatus.OK);
 		return responseEntity;
 	}
