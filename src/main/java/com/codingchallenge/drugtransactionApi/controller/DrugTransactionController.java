@@ -1,7 +1,5 @@
 package com.codingchallenge.drugtransactionApi.controller;
 
-import java.util.HashMap;
-
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -14,12 +12,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.codingchallenge.drugtransactionApi.DrugtransactionApiApplication;
 import com.codingchallenge.drugtransactionApi.model.Transaction;
 import com.codingchallenge.drugtransactionApi.service.DrugTransactionService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+
 @RestController
 @RequestMapping("/transactions")
+@Api(value="Drug transaction api", description="Operations pertaining to storing drug transaction")
 public class DrugTransactionController {
 	final Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -27,7 +29,8 @@ public class DrugTransactionController {
 	private DrugTransactionService dtservice;
 
 	@RequestMapping(value = "/transaction", method = RequestMethod.POST)
-	public ResponseEntity<?> saveTransaction(@Valid @RequestBody Transaction transaction) {
+	@ApiOperation(value = "Store transactions", response = ResponseEntity.class)
+	public ResponseEntity<?> saveTransaction( @ApiParam(value = "Transaction required to store in datastore", required = true) @Valid @RequestBody Transaction transaction) {
 		ResponseEntity<?> responseEntity;
 		try {
 			dtservice.saveTransaction(transaction);
