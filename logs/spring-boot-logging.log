@@ -1,4 +1,5 @@
 2019-05-07 00:42:37.299  INFO 14216 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+<<<<<<< Updated upstream
 2019-05-07 14:55:17.902  INFO 9852 --- [main] c.c.d.DrugtransactionApiApplication      : Starting DrugtransactionApiApplication on ALASETTSR01-WXL with PID 9852 (C:\proj\drugtransactionApi\target\classes started by SettSr01 in C:\proj\drugtransactionApi)
 2019-05-07 14:55:17.904  INFO 9852 --- [main] c.c.d.DrugtransactionApiApplication      : No active profile set, falling back to default profiles: default
 2019-05-07 14:55:19.722  INFO 9852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
@@ -141,3 +142,81 @@
 2019-05-07 17:21:12.144  INFO 2788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-05-07 17:21:12.155  INFO 2788 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
 2019-05-07 17:21:55.277  INFO 2788 --- [http-nio-8080-exec-1] c.c.d.service.DrugTransactionService     : transaction saved
+=======
+2019-05-07 20:29:14.309  INFO 6624 --- [main] c.c.d.DrugtransactionApiApplication      : Starting DrugtransactionApiApplication on DESKTOP-ME1QI5A with PID 6624 (C:\Users\sreel\Downloads\drugtransactionApi\target\classes started by sreel in C:\Users\sreel\Downloads\drugtransactionApi)
+2019-05-07 20:29:14.317  INFO 6624 --- [main] c.c.d.DrugtransactionApiApplication      : No active profile set, falling back to default profiles: default
+2019-05-07 20:29:16.143  INFO 6624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-07 20:29:16.187  INFO 6624 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-07 20:29:16.189  INFO 6624 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-07 20:29:16.333  INFO 6624 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-07 20:29:16.335  INFO 6624 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1949 ms
+2019-05-07 20:29:16.442  INFO 6624 --- [main] c.c.d.service.DrugTransactionService     : initilizing data store
+2019-05-07 20:29:16.682  INFO 6624 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-07 20:29:16.994  INFO 6624 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-07 20:29:17.002  INFO 6624 --- [main] c.c.d.DrugtransactionApiApplication      : Started DrugtransactionApiApplication in 3.753 seconds (JVM running for 11.394)
+2019-05-07 20:40:15.993  INFO 6624 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-07 20:40:15.997  INFO 6624 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-07 20:40:16.008  INFO 6624 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-05-07 20:40:16.210  INFO 6624 --- [http-nio-8080-exec-2] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.252  INFO 6624 --- [http-nio-8080-exec-1] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.274  INFO 6624 --- [http-nio-8080-exec-3] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.328  INFO 6624 --- [http-nio-8080-exec-9] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.357  INFO 6624 --- [http-nio-8080-exec-8] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.373  INFO 6624 --- [http-nio-8080-exec-5] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.390  INFO 6624 --- [http-nio-8080-exec-7] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.403  INFO 6624 --- [http-nio-8080-exec-6] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.417  INFO 6624 --- [http-nio-8080-exec-4] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.432  INFO 6624 --- [http-nio-8080-exec-10] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.445  INFO 6624 --- [http-nio-8080-exec-2] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.462  INFO 6624 --- [http-nio-8080-exec-1] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.475  INFO 6624 --- [http-nio-8080-exec-3] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.490  INFO 6624 --- [http-nio-8080-exec-9] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.511  INFO 6624 --- [http-nio-8080-exec-8] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.542  INFO 6624 --- [http-nio-8080-exec-5] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.557  INFO 6624 --- [http-nio-8080-exec-7] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.569  INFO 6624 --- [http-nio-8080-exec-6] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.582  INFO 6624 --- [http-nio-8080-exec-4] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.597  INFO 6624 --- [http-nio-8080-exec-10] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.616  INFO 6624 --- [http-nio-8080-exec-2] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.634  INFO 6624 --- [http-nio-8080-exec-1] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.657  INFO 6624 --- [http-nio-8080-exec-3] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.670  INFO 6624 --- [http-nio-8080-exec-9] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.682  INFO 6624 --- [http-nio-8080-exec-8] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.698  INFO 6624 --- [http-nio-8080-exec-5] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.715  INFO 6624 --- [http-nio-8080-exec-7] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.728  INFO 6624 --- [http-nio-8080-exec-6] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.742  INFO 6624 --- [http-nio-8080-exec-4] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.754  INFO 6624 --- [http-nio-8080-exec-10] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.765  INFO 6624 --- [http-nio-8080-exec-2] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.782  INFO 6624 --- [http-nio-8080-exec-1] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.807  INFO 6624 --- [http-nio-8080-exec-3] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.822  INFO 6624 --- [http-nio-8080-exec-9] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.835  INFO 6624 --- [http-nio-8080-exec-8] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.846  INFO 6624 --- [http-nio-8080-exec-5] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.859  INFO 6624 --- [http-nio-8080-exec-7] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.872  INFO 6624 --- [http-nio-8080-exec-6] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.884  INFO 6624 --- [http-nio-8080-exec-4] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.895  INFO 6624 --- [http-nio-8080-exec-10] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.908  INFO 6624 --- [http-nio-8080-exec-2] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.929  INFO 6624 --- [http-nio-8080-exec-1] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.955  INFO 6624 --- [http-nio-8080-exec-3] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.970  INFO 6624 --- [http-nio-8080-exec-9] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.984  INFO 6624 --- [http-nio-8080-exec-8] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:16.995  INFO 6624 --- [http-nio-8080-exec-5] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:17.008  INFO 6624 --- [http-nio-8080-exec-7] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:17.019  INFO 6624 --- [http-nio-8080-exec-6] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:40:17.032  INFO 6624 --- [http-nio-8080-exec-4] c.c.d.service.DrugTransactionService     : transaction saved
+2019-05-07 20:44:17.438  INFO 6624 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-07 20:44:31.103  INFO 7160 --- [main] c.c.d.DrugtransactionApiApplication      : Starting DrugtransactionApiApplication on DESKTOP-ME1QI5A with PID 7160 (C:\Users\sreel\Downloads\drugtransactionApi\target\classes started by sreel in C:\Users\sreel\Downloads\drugtransactionApi)
+2019-05-07 20:44:31.110  INFO 7160 --- [main] c.c.d.DrugtransactionApiApplication      : No active profile set, falling back to default profiles: default
+2019-05-07 20:44:32.930  INFO 7160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-07 20:44:32.976  INFO 7160 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-07 20:44:32.979  INFO 7160 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-07 20:44:33.121  INFO 7160 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-07 20:44:33.122  INFO 7160 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1942 ms
+2019-05-07 20:44:33.237  INFO 7160 --- [main] c.c.d.service.DrugTransactionService     : initilizing data store
+2019-05-07 20:44:33.480  INFO 7160 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-07 20:44:33.827  INFO 7160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-07 20:44:33.835  INFO 7160 --- [main] c.c.d.DrugtransactionApiApplication      : Started DrugtransactionApiApplication in 3.679 seconds (JVM running for 10.621)
+2019-05-07 20:49:34.279  INFO 7160 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+>>>>>>> Stashed changes

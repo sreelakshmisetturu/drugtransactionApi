@@ -22,16 +22,17 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
 @RestController
-@Api(value="Fetch Frequency api", description="Operations pertaining to querying drug transaction")
+@Api(value = "Fetch Frequency api", description = "Operations pertaining to querying drug transaction")
 public class FrequentMerchantsController {
 	final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private DrugTransactionService dtService;
 
-	@RequestMapping(value = "transaction/freqMerchants/{userId}", method = RequestMethod.GET)
+	@RequestMapping(value = "/users/{userId}", method = RequestMethod.GET)
 	@ApiOperation(value = "Fetch frequently visited  merchants", response = ResponseEntity.class)
-	public ResponseEntity<ArrayList<String>> fetchFrequentMerchants(@ApiParam(value = "user id to query Transactions", required = true) @PathVariable("userId") long userid) {
+	public ResponseEntity<ArrayList<String>> fetchFrequentMerchants(
+			@ApiParam(value = "user id to query Transactions", required = true) @PathVariable("userId") long userid) {
 
 		ArrayList<String> al = null;
 		try {
@@ -47,8 +48,9 @@ public class FrequentMerchantsController {
 			logger.error(e.toString());
 		}
 		HttpHeaders headers = new HttpHeaders();
-	    headers.setContentType(MediaType.APPLICATION_JSON);
-		ResponseEntity<ArrayList<String>> responseEntity = new ResponseEntity<ArrayList<String>>(al,headers, HttpStatus.OK);
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		ResponseEntity<ArrayList<String>> responseEntity = new ResponseEntity<ArrayList<String>>(al, headers,
+				HttpStatus.OK);
 		return responseEntity;
 	}
 
