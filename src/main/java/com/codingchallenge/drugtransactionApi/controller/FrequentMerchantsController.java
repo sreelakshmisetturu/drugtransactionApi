@@ -29,7 +29,7 @@ public class FrequentMerchantsController {
 	@Autowired
 	private DrugTransactionService dtService;
 
-	@RequestMapping(value = "/users/{userId}", method = RequestMethod.GET)
+	@RequestMapping(value = "/frequentmerchant/{userId}", method = RequestMethod.GET)
 	@ApiOperation(value = "Fetch frequently visited  merchants", response = ResponseEntity.class)
 	public ResponseEntity<ArrayList<String>> fetchFrequentMerchants(
 			@ApiParam(value = "user id to query Transactions", required = true) @PathVariable("userId") long userid) {
@@ -38,6 +38,7 @@ public class FrequentMerchantsController {
 		try {
 			al = dtService.fetchFrequentlyVisited(userid);
 			if (al == null || al.size() == 0) {
+				al = new ArrayList<String>();
 				logger.error("Error - Too few transactionsfor userId " + userid);
 				throw new InsufficientTransactionsException(
 						"Error - Too few transactions.Atleast five transactions are required to fetch three frequently visited merchants for userId "
@@ -47,6 +48,7 @@ public class FrequentMerchantsController {
 			// TODO Auto-generated catch block
 			logger.error(e.toString());
 		}
+		logger.info("[Response]: three most visited merchants for user "+ userid +" are "+al.toString());
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		ResponseEntity<ArrayList<String>> responseEntity = new ResponseEntity<ArrayList<String>>(al, headers,

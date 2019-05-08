@@ -36,6 +36,9 @@ public class DrugTransactionController {
 	@ApiOperation(value = "Store transactions", response = ResponseEntity.class)
 	public ResponseEntity<?> saveTransaction(
 			@ApiParam(value = "Transaction required to store in datastore", required = true) @Valid @RequestBody Transaction transaction) {
+		
+		logger.info("[Request]: "+transaction.toString());
+		
 		ResponseEntity<?> responseEntity;
 		try {
 			dtservice.saveTransaction(transaction);
@@ -44,11 +47,12 @@ public class DrugTransactionController {
 			responseEntity = new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 			return responseEntity;
 		}
-		HttpHeaders responseHeaders = new HttpHeaders();
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/freqMerchants/{userId}").
+		/*HttpHeaders responseHeaders = new HttpHeaders();
+		URI uri = ServletUriComponentsBuilder.
+				fromCurrentRequest().path("/freqMerchants/{userId}").
 				buildAndExpand(transaction.getUserId()).toUri();
-		responseHeaders.setLocation(uri);
-		responseEntity = new ResponseEntity<>(responseHeaders,HttpStatus.CREATED);
+		responseHeaders.setLocation(uri);*/
+		responseEntity = new ResponseEntity<>(HttpStatus.CREATED);
 		return responseEntity;
 
 	}

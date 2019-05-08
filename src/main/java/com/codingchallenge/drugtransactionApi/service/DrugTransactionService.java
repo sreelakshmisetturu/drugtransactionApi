@@ -58,6 +58,7 @@ public class DrugTransactionService {
 			userfrequency.put(userid, freq + 1);
 		}
 		addMerchantFrequency(usermerchantmap, userid, merchant);
+		logger.info("transaction saved: txn-id - "+transaction.getTranId());
 	}
 
 	private void addMerchantFrequency(HashMap<Long, HashMap<String, Integer>> usermerchantmap, long userid,
@@ -66,12 +67,11 @@ public class DrugTransactionService {
 		int freq = merchantFreq.getOrDefault(merchant, 0);
 		merchantFreq.put(merchant, freq + 1);
 		usermerchantmap.put(userid, merchantFreq);
-		logger.info("transaction saved");
 	}
 
 	public ArrayList<String> fetchFrequentlyVisited(long userid) throws Exception{
 		
-		logger.info("querying top three visited merchants for userid "+userid);
+		logger.info("querying for userid "+userid);
 		
 		ArrayList<String> topthree = null;
 		if (userfrequency.getOrDefault(userid, 0) >= 5) {
@@ -91,8 +91,8 @@ public class DrugTransactionService {
 	 * index of array as frequency and arraylist of that index consisting of
 	 * merchants having that frequency. Iterate over the array of arraylists
 	 * from last index to first, store top three merchants and return them.
-	 * complexity of the algorithm is O(n), where n is the maximum frequency
-	 * present in merchantfreq map.
+	 * complexity of the algorithm is O(n), where n is the maximum of[max frequency
+	 * present in merchantfreq map or size of merchantfreq map].
 	 *
 	 */
 	private ArrayList<String> findTopThree(HashMap<String, Integer> merchantfreq) {
@@ -103,8 +103,6 @@ public class DrugTransactionService {
 		for (Map.Entry<String, Integer> entry : merchantfreq.entrySet()) {
 			max = Math.max(max, entry.getValue());
 		}
-
-		logger.info("the user visited a merchant atmost "+max+" times");
 		
 		ArrayList<String>[] frequencybucket = (ArrayList<String>[]) new ArrayList[max + 1];
 		for (int i = 1; i <= max; i++) {

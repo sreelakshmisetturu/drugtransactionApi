@@ -62,4 +62,10 @@ public class Transaction {
 	public void setTranId(long tranId) {
 		this.tranId = tranId;
 	}
+
+	@Override
+	public String toString() {
+		return "txn-id: '" + this.tranId + "', userId: '" + this.userId + "', merchant: '" + this.merchant
+				+ "', price: '" + this.price + "', purchased date: '" + this.purchaseDate + "'";
+	}
 }
